@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Magister Administrasi Publik — Program S2 Unggulan</title>
+<meta name="description" content="Program Magister (S2) Administrasi Publik — kepemimpinan, tata kelola, dan kebijakan publik berkelas premium. Kurikulum modern, dosen pakar, riset terdepan." />
+<meta name="keywords" content="S2 Administrasi Publik, MPA, Magister Administrasi Publik, Kebijakan Publik, Tata Kelola, Pascasarjana" />
+<meta property="og:title" content="Magister Administrasi Publik — Program S2 Unggulan" />
+<meta property="og:description" content="Program Magister Administrasi Publik premium — kepemimpinan publik, kebijakan, dan tata kelola." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="img/hero-campus.jpg" />
+<link rel="canonical" href="./" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#B68D40',
+          secondary: '#8C6A2F',
+          accent: '#D4A373',
+          bg: '#FFFDF7',
+          cream: '#F7F3E9',
+          ink: '#2B2B2B',
+          muted: '#5C5C5C',
+        },
+        fontFamily: {
+          sans: ['Poppins', 'system-ui', 'sans-serif'],
+          display: ['"Playfair Display"', 'serif'],
+        },
+        boxShadow: {
+          glow: '0 20px 60px -20px rgba(182, 141, 64, 0.35)',
+          soft: '0 10px 40px -10px rgba(43, 43, 43, 0.08)',
+        },
+        backgroundImage: {
+          'gold-gradient': 'linear-gradient(135deg, #B68D40 0%, #D4A373 100%)',
+          'cream-gradient': 'linear-gradient(180deg, #FFFDF7 0%, #F7F3E9 100%)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; background: #FFFDF7; color: #2B2B2B; }
+  .font-display { font-family: 'Playfair Display', serif; }
+
+  /* Noise texture */
+  .noise::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .04;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 253, 247, 0.55);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(182, 141, 64, 0.18);
+  }
+  .glass-dark {
+    background: rgba(43, 43, 43, 0.55);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(212, 163, 115, 0.25);
+  }
+
+  /* Floating blobs */
+  .blob {
+    position: absolute; border-radius: 9999px; filter: blur(70px); opacity: .55; pointer-events: none;
+    animation: float 14s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(20px,-30px) scale(1.08); }
+  }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: all .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Underline link */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 100%;
+    background: #B68D40; transform: scaleX(0); transform-origin: right; transition: transform .35s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(135deg,#B68D40,#D4A373); color:#fff;
+    transition: all .35s ease; box-shadow: 0 10px 30px -10px rgba(182,141,64,.55);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -12px rgba(182,141,64,.7); }
+  .btn-ghost {
+    border: 1.5px solid #B68D40; color:#8C6A2F; transition: all .35s ease;
+  }
+  .btn-ghost:hover { background:#B68D40; color:#fff; transform: translateY(-2px); }
+
+  /* Cards hover */
+  .feature-card { transition: all .5s cubic-bezier(.2,.7,.2,1); }
+  .feature-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -25px rgba(140,106,47,.25); border-color:#D4A373; }
+
+  /* Accordion */
+  .acc-item[open] .acc-icon { transform: rotate(45deg); }
+  .acc-icon { transition: transform .3s ease; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #F7F3E9; }
+  ::-webkit-scrollbar-thumb { background: #D4A373; border-radius: 8px; }
+
+  /* Marquee */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-track { animation: marquee 30s linear infinite; }
+
+  /* Hero text gradient */
+  .text-gold { background: linear-gradient(135deg,#B68D40,#8C6A2F); -webkit-background-clip: text; background-clip: text; color: transparent; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between py-5">
+    <a href="#home" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 rounded-xl bg-gold-gradient grid place-items-center shadow-glow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10v6c0 1 3 3 6 3s6-2 6-3v-6"/></svg>
+      </div>
+      <div class="leading-tight">
+        <p class="font-display text-lg text-ink">Fakultas <span class="text-primary">Ilmu Sosial dan Ilmu Politik</span></p>
+        <p class="text-[10px] tracking-[0.2em] text-muted uppercase">Magister Adm. Publik</p>
+      </div>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-9 text-sm font-medium text-ink">
+      <li><a href="#home" class="nav-link">Beranda</a></li>
+      <li><a href="#about" class="nav-link">Tentang</a></li>
+      <li class="relative group">
+        <button class="nav-link flex items-center gap-1">Akademik
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="absolute top-full left-0 mt-3 w-60 glass rounded-2xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-soft">
+          <a href="#curriculum" class="block px-4 py-2.5 rounded-lg hover:bg-cream text-sm">Kurikulum</a>
+          <a href="#lecturers" class="block px-4 py-2.5 rounded-lg hover:bg-cream text-sm">Dosen</a>
+          <a href="#research" class="block px-4 py-2.5 rounded-lg hover:bg-cream text-sm">Riset & Publikasi</a>
+          <a href="#activities" class="block px-4 py-2.5 rounded-lg hover:bg-cream text-sm">Kegiatan Mahasiswa</a>
+        </div>
+      </li>
+      <li><a href="#admission" class="nav-link">Pendaftaran</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Kontak</a></li>
+    </ul>
+
+    <a href="#admission" class="hidden lg:inline-flex btn-primary px-6 py-2.5 rounded-full text-sm font-semibold items-center gap-2">
+      Admission
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+
+    <button id="hamburger" class="lg:hidden w-11 h-11 rounded-xl glass grid place-items-center" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden px-6 pb-5">
+    <div class="glass rounded-2xl p-5 space-y-2 shadow-soft">
+      <a href="#home" class="block py-2 text-ink">Beranda</a>
+      <a href="#about" class="block py-2 text-ink">Tentang</a>
+      <a href="#curriculum" class="block py-2 text-ink">Kurikulum</a>
+      <a href="#lecturers" class="block py-2 text-ink">Dosen</a>
+      <a href="#research" class="block py-2 text-ink">Riset</a>
+      <a href="#admission" class="block py-2 text-ink">Pendaftaran</a>
+      <a href="#contact" class="block py-2 text-ink">Kontak</a>
+      <a href="#admission" class="block text-center btn-primary py-3 rounded-full mt-3">Admission</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative pt-36 pb-24 overflow-hidden noise">
+  <div class="blob bg-primary/30 w-[420px] h-[420px] -top-20 -left-20"></div>
+  <div class="blob bg-accent/40 w-[380px] h-[380px] top-40 right-0" style="animation-delay:-5s"></div>
+  <div class="absolute inset-0 bg-cream-gradient -z-10"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-medium text-secondary tracking-wider uppercase">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Program Magister Administrasi Publik
+      </span>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] mt-6 text-ink">
+        Master of <br/>
+        <span class="text-gold">Public Administration</span>
+      </h1>
+      <p class="mt-6 text-lg text-muted max-w-xl leading-relaxed">
+        Membentuk pemimpin publik visioner melalui pendidikan magister kelas dunia.
+        Kurikulum berbasis riset, fokus pada tata kelola, kebijakan, dan inovasi pelayanan publik.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#curriculum" class="btn-primary px-7 py-3.5 rounded-full font-semibold inline-flex items-center gap-2">
+          Explore Program
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#admission" class="btn-ghost px-7 py-3.5 rounded-full font-semibold inline-flex items-center gap-2 bg-white/50">
+          Admission Information
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <!-- <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
+        <div class="glass rounded-2xl p-5">
+          <p class="font-display text-3xl text-primary">A</p>
+          <p class="text-xs text-muted mt-1">Akreditasi Unggul</p>
+        </div>
+        <div class="glass rounded-2xl p-5">
+          <p class="font-display text-3xl text-primary">1.200+</p>
+          <p class="text-xs text-muted mt-1">Mahasiswa Aktif</p>
+        </div>
+        <div class="glass rounded-2xl p-5">
+          <p class="font-display text-3xl text-primary">350+</p>
+          <p class="text-xs text-muted mt-1">Publikasi Riset</p>
+        </div>
+        <div class="glass rounded-2xl p-5">
+          <p class="font-display text-3xl text-primary">5.000+</p>
+          <p class="text-xs text-muted mt-1">Jaringan Alumni</p>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="relative reveal">
+      <div class="absolute -inset-6 bg-gold-gradient rounded-[2rem] blur-2xl opacity-30"></div>
+      <div class="relative rounded-[2rem] overflow-hidden shadow-glow">
+        <img src="img/fisip.jpg" alt="Kampus Magister Administrasi Publik" class="w-full h-[560px] object-cover" />
+      </div>
+      <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-5 w-64 shadow-soft">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-gold-gradient grid place-items-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2 4 7v6c0 5 4 8 8 9 4-1 8-4 8-9V7l-8-5Z"/></svg>
+          </div>
+          <div>
+            <p class="text-xs text-muted">Akreditasi LAMSPAK</p>
+            <p class="font-semibold text-ink">Unggul (A)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNER MARQUEE ============ -->
+<section class="py-10 bg-cream/60 overflow-hidden border-y border-primary/10">
+  <p class="text-center text-xs uppercase tracking-[0.3em] text-muted mb-6">Mitra Pemerintah & Akademik</p>
+  <div class="relative overflow-hidden">
+    <div class="flex gap-16 marquee-track w-max">
+      <!-- repeat 2x -->
+      <template id="partners-tpl"></template>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="relative reveal">
+      <div class="absolute -inset-4 bg-accent/30 rounded-3xl blur-2xl"></div>
+      <img src="img/about-students.jpg" alt="Mahasiswa berdiskusi" class="relative rounded-3xl shadow-soft w-full h-[520px] object-cover" />
+      <div class="absolute bottom-6 right-6 glass rounded-2xl p-5 max-w-[220px]">
+        <p class="font-display text-2xl text-primary">25 Tahun</p>
+        <p class="text-xs text-muted mt-1">Mendidik pemimpin publik Indonesia</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Tentang Program</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 leading-tight text-ink">
+        Membentuk Generasi <span class="text-gold">Pemimpin Publik</span> Visioner
+      </h2>
+      <p class="mt-5 text-muted leading-relaxed">
+        Program Magister Administrasi Publik dirancang untuk menjawab tantangan kompleks tata kelola modern.
+        Kami memadukan teori klasik administrasi publik dengan praktik kontemporer berbasis data, teknologi,
+        dan kolaborasi lintas sektor.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mt-8">
+        <div class="glass rounded-2xl p-6">
+          <div class="w-11 h-11 rounded-xl bg-gold-gradient grid place-items-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink">Visi</h3>
+          <p class="text-sm text-muted mt-2">Menjadi pusat unggulan pendidikan administrasi publik berstandar internasional.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="w-11 h-11 rounded-xl bg-gold-gradient grid place-items-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+          <h3 class="font-semibold text-ink">Misi</h3>
+          <p class="text-sm text-muted mt-2">Menyelenggarakan pendidikan, riset, dan pengabdian berorientasi dampak publik nyata.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section class="py-28 bg-cream-gradient relative overflow-hidden">
+  <div class="blob bg-primary/20 w-[500px] h-[500px] top-10 -right-40"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Mengapa Memilih Kami</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Keunggulan Yang <span class="text-gold">Membedakan</span></h2>
+      <p class="mt-4 text-muted">Enam pilar yang menjadikan program kami pilihan utama profesional sektor publik.</p>
+    </div>
+
+    <div id="features-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14"></div>
+  </div>
+</section>
+
+<!-- ============ CURRICULUM ============ -->
+<section id="curriculum" class="py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Kurikulum</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Perjalanan <span class="text-gold">Akademik</span> Anda</h2>
+      <p class="mt-4 text-muted">Empat semester terstruktur dari teori fundamental hingga tesis berbasis riset.</p>
+    </div>
+
+    <div class="relative mt-16">
+      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+      <div id="timeline" class="space-y-10"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LECTURERS ============ -->
+<section id="lecturers" class="py-28 bg-cream/60 relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+      <div>
+        <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Dosen Pengampu</p>
+        <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Pakar yang <span class="text-gold">Membimbing</span></h2>
+      </div>
+      <p class="text-muted max-w-md">Dosen kami adalah praktisi dan akademisi dengan rekam jejak nasional & internasional.</p>
+    </div>
+    <div id="lecturers-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-14"></div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Riset & Publikasi</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Kontribusi Ilmu untuk <span class="text-gold">Bangsa</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-5 mt-14">
+      <div class="glass rounded-2xl p-7 text-center">
+        <p class="font-display text-4xl text-primary">350+</p><p class="text-sm text-muted mt-2">Jurnal Terindeks</p>
+      </div>
+      <div class="glass rounded-2xl p-7 text-center">
+        <p class="font-display text-4xl text-primary">120+</p><p class="text-sm text-muted mt-2">Riset Berlangsung</p>
+      </div>
+      <div class="glass rounded-2xl p-7 text-center">
+        <p class="font-display text-4xl text-primary">45</p><p class="text-sm text-muted mt-2">Mitra Kolaborasi</p>
+      </div>
+      <div class="glass rounded-2xl p-7 text-center">
+        <p class="font-display text-4xl text-primary">28</p><p class="text-sm text-muted mt-2">Penghargaan Nasional</p>
+      </div>
+    </div>
+
+    <div id="publications" class="grid md:grid-cols-3 gap-6 mt-10"></div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section id="activities" class="py-28 bg-cream/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Kegiatan Mahasiswa</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Belajar Melampaui <span class="text-gold">Ruang Kelas</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <div class="group relative rounded-3xl overflow-hidden h-80 reveal">
+        <img src="img/activity-1.jpg" alt="Seminar Akademik" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <p class="text-xs uppercase tracking-widest text-accent">Seminar</p>
+          <h3 class="font-display text-2xl mt-1">Konferensi Tata Kelola</h3>
+        </div>
+      </div>
+      <div class="group relative rounded-3xl overflow-hidden h-80 reveal">
+        <img src="img/activity-2.jpg" alt="Pengabdian Masyarakat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <p class="text-xs uppercase tracking-widest text-accent">Pengabdian</p>
+          <h3 class="font-display text-2xl mt-1">Desa Binaan</h3>
+        </div>
+      </div>
+      <div class="group relative rounded-3xl overflow-hidden h-80 reveal">
+        <img src="img/activity-3.jpg" alt="Workshop Kebijakan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <div class="absolute bottom-0 p-6 text-white">
+          <p class="text-xs uppercase tracking-widest text-accent">Workshop</p>
+          <h3 class="font-display text-2xl mt-1">Lab Kebijakan Publik</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMISSION ============ -->
+<section id="admission" class="py-28 relative overflow-hidden">
+  <div class="blob bg-accent/30 w-[500px] h-[500px] -top-20 -left-40"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Pendaftaran</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Mulai Perjalanan <span class="text-gold">Magister</span> Anda</h2>
+    </div>
+
+    <div id="steps" class="grid md:grid-cols-4 gap-6 mt-14"></div>
+
+    <div class="mt-14 grid lg:grid-cols-2 gap-6">
+      <div class="glass rounded-3xl p-8">
+        <h3 class="font-display text-2xl text-ink">Persyaratan</h3>
+        <ul class="mt-5 space-y-3 text-muted text-sm">
+          <li class="flex gap-3"><span class="text-primary">✓</span> Ijazah S1 dari PT terakreditasi minimal B</li>
+          <li class="flex gap-3"><span class="text-primary">✓</span> IPK minimum 3.00 (skala 4.00)</li>
+          <li class="flex gap-3"><span class="text-primary">✓</span> Sertifikat TOEFL ITP ≥ 475 atau setara</li>
+          <li class="flex gap-3"><span class="text-primary">✓</span> Surat rekomendasi 2 akademisi/atasan</li>
+          <li class="flex gap-3"><span class="text-primary">✓</span> Proposal penelitian awal (1.500–2.000 kata)</li>
+        </ul>
+      </div>
+      <div class="glass rounded-3xl p-8 bg-gold-gradient text-white">
+        <h3 class="font-display text-2xl">Biaya & Beasiswa</h3>
+        <p class="mt-4 text-white/90 text-sm">Tersedia berbagai skema beasiswa LPDP, Beasiswa Unggulan, dan beasiswa kemitraan pemerintah daerah.</p>
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="bg-white/15 rounded-xl p-4 backdrop-blur">
+            <p class="text-xs opacity-80">SPP / Semester</p>
+            <p class="font-display text-2xl mt-1">Rp 12 Jt</p>
+          </div>
+          <div class="bg-white/15 rounded-xl p-4 backdrop-blur">
+            <p class="text-xs opacity-80">Dana Hibah</p>
+            <p class="font-display text-2xl mt-1">100%</p>
+          </div>
+        </div>
+        <a href="#contact" class="mt-7 inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-semibold hover:bg-cream transition">
+          Daftar Sekarang
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-28 bg-cream/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Testimoni</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Cerita dari <span class="text-gold">Alumni</span></h2>
+    </div>
+
+    <div class="relative mt-14">
+      <div id="testimonialTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth"></div>
+      <div class="flex justify-center gap-3 mt-6">
+        <button id="prevT" class="w-11 h-11 rounded-full glass grid place-items-center hover:bg-cream">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button id="nextT" class="w-11 h-11 rounded-full glass grid place-items-center hover:bg-cream">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-28">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">FAQ</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Pertanyaan <span class="text-gold">Umum</span></h2>
+    </div>
+    <div id="faq-list" class="mt-12 space-y-3"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-28 bg-cream-gradient relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
+    <div class="reveal">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary font-semibold">Hubungi Kami</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-4 text-ink">Mari <span class="text-gold">Berdiskusi</span></h2>
+      <p class="mt-4 text-muted">Tim admisi siap membantu pertanyaan Anda seputar program, persyaratan, dan beasiswa.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-gradient grid place-items-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div><p class="font-semibold text-ink">Alamat</p><p class="text-sm text-muted">Gedung E (FISIP) - Kampus 1 (Jl. AH. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung, Jawa Barat 40614)</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-gradient grid place-items-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          </div>
+          <div><p class="font-semibold text-ink">Email</p><p class="text-sm text-muted">magisterap.uinsgd.ac.id</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-gradient grid place-items-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          </div>
+          <div><p class="font-semibold text-ink">Telepon</p><p class="text-sm text-muted">+62 21 5500 1234</p></div>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-2xl overflow-hidden h-56 glass">
+        <iframe
+          src="https://www.google.com/maps?q=-6.9317,107.7176&hl=id&z=16&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <form class="glass rounded-3xl p-8 reveal space-y-5" onsubmit="event.preventDefault(); alert('Terima kasih! Tim kami akan menghubungi Anda.');">
+      <div>
+        <label class="text-sm font-medium text-ink">Nama Lengkap</label>
+        <input type="text" required class="mt-2 w-full px-4 py-3 rounded-xl bg-white/70 border border-primary/20 focus:border-primary focus:outline-none transition" placeholder="Nama Anda" />
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-sm font-medium text-ink">Email</label>
+          <input type="email" required class="mt-2 w-full px-4 py-3 rounded-xl bg-white/70 border border-primary/20 focus:border-primary focus:outline-none transition" placeholder="email@contoh.com" />
+        </div>
+        <div>
+          <label class="text-sm font-medium text-ink">Telepon</label>
+          <input type="tel" class="mt-2 w-full px-4 py-3 rounded-xl bg-white/70 border border-primary/20 focus:border-primary focus:outline-none transition" placeholder="+62" />
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-medium text-ink">Topik</label>
+        <select class="mt-2 w-full px-4 py-3 rounded-xl bg-white/70 border border-primary/20 focus:border-primary focus:outline-none">
+          <option>Informasi Pendaftaran</option><option>Beasiswa</option><option>Kurikulum</option><option>Kerja Sama</option>
+        </select>
+      </div>
+      <div>
+        <label class="text-sm font-medium text-ink">Pesan</label>
+        <textarea rows="4" class="mt-2 w-full px-4 py-3 rounded-xl bg-white/70 border border-primary/20 focus:border-primary focus:outline-none" placeholder="Tulis pertanyaan Anda..."></textarea>
+      </div>
+      <button class="btn-primary w-full py-3.5 rounded-xl font-semibold">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-white/80 pt-20 pb-8 relative noise overflow-hidden">
+  <div class="blob bg-primary/20 w-[400px] h-[400px] -top-40 right-0"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-gold-gradient grid place-items-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10v6c0 1 3 3 6 3s6-2 6-3v-6"/></svg></div>
+          <p class="font-display text-xl text-white">Magister Adm. Publik</p>
+        </div>
+        <p class="text-sm mt-5 leading-relaxed">Membentuk pemimpin publik berintegritas, profesional, dan visioner untuk Indonesia.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Akademik</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#curriculum" class="hover:text-accent">Kurikulum</a></li>
+          <li><a href="#lecturers" class="hover:text-accent">Dosen</a></li>
+          <li><a href="#research" class="hover:text-accent">Riset</a></li>
+          <li><a href="#admission" class="hover:text-accent">Pendaftaran</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Sumber Daya</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-accent">Perpustakaan Digital</a></li>
+          <li><a href="#" class="hover:text-accent">Jurnal Akademik</a></li>
+          <li><a href="#" class="hover:text-accent">Karir Alumni</a></li>
+          <li><a href="#faq" class="hover:text-accent">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Newsletter</h4>
+        <p class="text-sm">Dapatkan info terbaru dari kami.</p>
+        <div class="mt-3 flex gap-2">
+          <input type="email" placeholder="Email Anda" class="flex-1 px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 placeholder-white/40 text-sm focus:outline-none focus:border-accent" />
+          <button class="btn-primary px-4 rounded-lg text-sm">→</button>
+        </div>
+        <div class="flex gap-3 mt-5">
+          <a href="#" class="w-10 h-10 rounded-lg bg-white/10 grid place-items-center hover:bg-primary transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8a8.49 8.49 0 0 1-2.36.64 4.13 4.13 0 0 0 1.81-2.27 8.21 8.21 0 0 1-2.61 1 4.1 4.1 0 0 0-7 3.74A11.64 11.64 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.27 5.49 4.1 4.1 0 0 1-1.86-.5v.05a4.1 4.1 0 0 0 3.3 4 4.06 4.06 0 0 1-1.86.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.28 11.6 11.6 0 0 0 8.29 20c7.55 0 11.68-6.25 11.68-11.67v-.53A8.31 8.31 0 0 0 22 5.8Z"/></svg></a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-white/10 grid place-items-center hover:bg-primary transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16Zm0 5.84a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 6.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2Zm5.1-6.76a.94.94 0 1 0 0-1.88.94.94 0 0 0 0 1.88Z"/></svg></a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-white/10 grid place-items-center hover:bg-primary transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V8h3v11ZM6.5 6.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-14 pt-6 text-sm text-white/50 flex flex-col md:flex-row justify-between gap-3">
+      <p>© 2026 MPA Institute. All rights reserved.</p>
+      <p>Magister Administrasi Publik — Akreditasi Unggul</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
